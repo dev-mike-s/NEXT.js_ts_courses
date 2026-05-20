@@ -1,25 +1,20 @@
-// root/pages/artikel/[artikelid]/variante/[varianteid].js
-
+//root/pages/artikel/[artikelid]/variante/[varianteid].js
 /**
- * Beispiel für dynamisches Page Routing:
- * client-Hook 'useRouter'
- * Nachteil: Kann unnötig kompliziert werden und kann beim Laden 
- * erstmal leer sein, bis der Router im Browser die ID ausgelesen hatte.
- * Besser: Autos mit 'fetch all routes'
- * 
- * http://localhost:3000/artikel/42/variante/2
- * http://localhost:3000/artikel/{42}/variante/{2} Platzhalter
+ * Route-Komponente fuer parameterisierte Seiteninhalte, bildet URL-Segmente auf konkrete UI-Aussagen ab.
+ * Dynamic Routing mit useRouter oder Segment-Props, bedingtes Rendering anhand Segmentanzahl und Parametern.
+ * Input URL-Segmente und optional Query-Werte, Logic Auswertung der Parameter, Output routeabhaengiger Seitentext oder Detailansicht.
+ * Next.js Besonderheit Dynamic, Catch-all und Optional Catch-all Segmente ([id], [...slug], [[...slug]]) steuern Route-Matching.
  */
 
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 
 export default function ID() {
+
     const router = useRouter();
     const {artikelid, varianteid} = router.query;
 
     return (
         <div>
             <h1>Die ID lautet {artikelid} und für Variante {varianteid} </h1>
-        </div>
-    )
+        </div>);
 }

@@ -1,50 +1,33 @@
 //root/pages/benutzer/index.js
+/**
+ * Benutzeruebersichtsseite, rendert externe Nutzerdaten als statisch vorgerenderte Liste fuer Lernzwecke.
+ * Pages-Router SSG mit getStaticProps, fetch API, funktionale Listenrenderung in React.
+ * Input API-Response mit User-Array, Logic JSON-Transformation und map-Ausgabe, Output HTML-Liste der Benutzernamen.
+ * Next.js Besonderheit Build-time Datenbeschaffung reduziert Laufzeitlast und liefert sofort statisches Initial-HTML.
+ */
 
-import React from 'react'
+import React from 'react';
 
 export default function index({users}) {
-  return (
-    <div>
-        <h1>Liste der Benutzer</h1>
-        {users.map((user)=> [
-            <h2 key={user.username}>{user.username}</h2>
-        ])}
-    </div>
-  )
+
+    return (
+        <div>
+            <h1>Liste der Benutzer</h1>
+
+            {users.map((user) => [
+                <h2 key={user.username}>{user.username}</h2>
+            ])}
+
+        </div>);
 }
+export async function getStaticProps() {
 
-// SSG z.B. für Kontakt/Impressum  + ISR
-// Vorteile: Schnelligkeit, Statisches Webhosting (CDN), 
-// wenig API-Aufrufe, Sicherheit
-// Nachteile: Inhalte schnell veraltet, Aktualisierung aufwendig,
-// Zeitaufwendig
-
-// ISR z.B. für E-Commerce
-// ISR Vorteile: Sehr schnell, oft aktuell, große Webseiten
-// Nachteile: Erster Seitenaufruf langsam, Inhalt kann veralten
-export async function getStaticProps(){
-    const antwort = await fetch('https://jsonplaceholder.typicode.com/users')
+    const antwort = await fetch('https://jsonplaceholder.typicode.com/users');
     const users = await antwort.json();
+
     return {
-        props:{
+        props: {
             users
         },
-        // IRS
-        // revalidate: 300
-    }
+    };
 }
-
-/*
-/ SSR z.B. für Artikel/Beiträge
-/ Vorteile: Aktualität, Vollautomatisch
-/ Nachteile: Nicht jeder Hoster, Langsamer, 
-export async function getServerSideProps(){
-    const antwort = await fetch('https://jsonplaceholder.typicode.com/users')
-    const users = await antwort.json();
-    return {
-        props:{
-            users
-        }
-    }
-}
-*/

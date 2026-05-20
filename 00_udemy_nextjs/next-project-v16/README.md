@@ -1,12 +1,12 @@
-﻿# next-project-v16
+# next-project-v16
 
-## Tech Profile
-- Stack: Modern Next.js 16 + React 19 + TypeScript (strict)
-- Routing: App Router (`app/*`)
-- Rendering: Server Components by default
-- Data Layer: MongoDB + Mongoose integration
-- Styling: Tailwind CSS v4
-- API Layer: Route Handlers (`app/api/*/route.ts`)
+## Gelernte Themen
+- App Router in Next.js 16, Segment-Struktur und Dynamic Routes (`app/*`, `[param]`)
+- Trennung von Server Components und Client Components (`"use client"`)
+- Route Handlers fuer API-Endpunkte (`app/api/*/route.ts`)
+- Schutz sensibler Bereiche mit `middleware.ts` und Cookie-Token
+- Fullstack CRUD mit MongoDB, Mongoose und serverseitigem Data Fetching
+- Globaler Client-State mit Zustand, Checkout-Flow mit PayPal
 
 ## Setup
 - Install: `npm install`

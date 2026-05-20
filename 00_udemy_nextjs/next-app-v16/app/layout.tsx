@@ -1,26 +1,23 @@
 //root/app/layout.tsx
+/**
+ * Root Layout der App-Router-Anwendung, definiert dauerhaftes Shell-UI und globale Dokumentstruktur.
+ * Metadata-Export, Layout-Props mit children, Server-Component-Komposition, Einbindung globaler Styles und Shared-Navigation.
+ * Input geroutete Child-Segmente, Logic Einbettung in html und body sowie Rahmenkomponenten, Output konsistentes Seitenlayout.
+ * Next.js Besonderheit app/layout.tsx ist verpflichtend im App Router und ersetzt die Kombination aus _app und _document.
+ */
 
-// in v12 mit head dies kann hier nur noch als Objekt übergeben werden
-// {children} als Wrapper.
-// Mit Link passiert Next-Magie: Statt Neuladen (böses Flackern), 
-// wird im Hintergrund nur der Inhalt {children} ausgetauscht. 
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-import type { Metadata } from 'next';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import type {Metadata} from 'next';
 import Link from 'next/link';
-
 export const metadata: Metadata = {
-  title: 'Willkommen zu Next v16',
-  keywords: ['next.js', 'react'],
+    title: 'Willkommen zu Next v16',
+    keywords: ['next.js', 'react'],
 };
-
 interface LayoutProps {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }
-
-export default function RootLayout ( {children} : LayoutProps) {
-  return (
-    <html lang="de">
+export default function RootLayout({children}: LayoutProps) {
+    return (<html lang="de">
       <body>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
 
@@ -57,16 +54,5 @@ export default function RootLayout ( {children} : LayoutProps) {
         </div>
 
       </body>
-    </html>
-  );
+    </html>);
 }
-
-/*
-    <html lang="de">
-      <body>
-        <main className="container m-4">
-          {children}
-        </main>
-      </body>
-    </html>
-*/

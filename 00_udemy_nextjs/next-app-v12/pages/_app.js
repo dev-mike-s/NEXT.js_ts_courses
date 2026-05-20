@@ -1,21 +1,20 @@
 //root/pages/_app.js
-
-/* Dies ist die globale Einstiegsdatei (v12). Sie umschließt jede einzelne Seite der App, 
- * ermöglicht globales CSS (Bootstrap) und ein persistentes Layout, das beim Navigieren nicht neu lädt.
- * Sie dient als Brücke, um Daten aus Server-Side-Funktionen (pageProps) -
- * direkt in die jeweils aktive Seite (Component) zu injizieren.
+/**
+ * Globaler Einstieg der Pages-Router-App, injiziert Layout und gemeinsame Styles fuer jede Seitenrenderung.
+ * Custom App Pattern, Component und pageProps Injection, globale CSS-Imports, Komposition ueber Wrapper-Komponente.
+ * Input aktive Page-Komponente plus vorgerenderte Props, Logic Einbettung in Layout, Output vollstaendig gerenderte Seite.
+ * Next.js Besonderheit _app.js steuert seitenuebergreifende Initialisierung und ersetzt per-page Boilerplate im Pages Router.
  */
 
-import Layout from '../komponenten/Layout'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import Layout from '../komponenten/Layout';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({Component, pageProps}) {
+
     return (
         <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    )
-    //<Component {...pageProps} />
+            <Component {...pageProps}/>
+        </Layout>);
 }
 
-export default MyApp
+export default MyApp;

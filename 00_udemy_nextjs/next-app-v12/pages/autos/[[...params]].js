@@ -1,26 +1,26 @@
-// root/pages/autos/[[...params]].js
+//root/pages/autos/[[...params]].js
+/**
+ * Route-Komponente fuer parameterisierte Seiteninhalte, bildet URL-Segmente auf konkrete UI-Aussagen ab.
+ * Dynamic Routing mit useRouter oder Segment-Props, bedingtes Rendering anhand Segmentanzahl und Parametern.
+ * Input URL-Segmente und optional Query-Werte, Logic Auswertung der Parameter, Output routeabhaengiger Seitentext oder Detailansicht.
+ * Next.js Besonderheit Dynamic, Catch-all und Optional Catch-all Segmente ([id], [...slug], [[...slug]]) steuern Route-Matching.
+ */
 
 import {useRouter} from 'next/router';
 
-/**
- * Beispiel für 'fetch all routes' bzw. "Optional Catch-all"
- * localhost:3000/autos/parameter1/parameter2/parameter3
- * localhost:3000/autos/tesla/30000
- * localhost:3000/autos
- */
 export default function ID() {
-    
+
     const router = useRouter();
-    const {params = [] } = router.query;
+    const {params = []} = router.query;
 
     if (params.length === 2) {
         return (
             <div>
                 <h1> Alle {params[0]} für unter {params[1]} Euro </h1>
-            </div>
-        );
-    } else if (params.length === 1) {
-        return <h1> Alle {params[0]} </h1>
+            </div>);
     }
-    return <h1> Autos </h1>
+    else if (params.length === 1) {
+        return <h1> Alle {params[0]} </h1>;
+    }
+    return <h1> Autos </h1>;
 }

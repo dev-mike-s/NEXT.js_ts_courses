@@ -1,10 +1,14 @@
+//root/models/Produkt.js
 /**
- * Mongoose-Modell fuer Produkte in v12. Das Schema definiert Pflichtfelder und Datentypen.
+ * Persistenzmodell fuer MongoDB, definiert Dokumentstruktur, Validierung und Collection-Verhalten im Shop-Domainkontext.
+ * Mongoose Schema-Definitionen, Feldrestriktionen, Subdokumente, Model-Caching ueber mongoose.models oder models Pattern.
+ * Input Anwendungsdaten aus API oder Server Components, Logic Schema-Validierung und Mapping, Output gespeicherte oder geladene Dokumente.
+ * Next.js Besonderheit serverseitige Nutzung in API Routes und Route Handlers, verhindert Recompile-Model-Konflikte im Dev-Modus.
  */
-import mongoose from "mongoose";
 
+import mongoose from "mongoose";
 const ProduktSchema = new mongoose.Schema({
-    name : {
+    name: {
         type: String,
         required: true,
         maxlength: 50
@@ -48,7 +52,5 @@ const ProduktSchema = new mongoose.Schema({
             }
         ]
     },
-},
-)
-
+});
 export default mongoose.models.Produkt || mongoose.model("Produkt", ProduktSchema);

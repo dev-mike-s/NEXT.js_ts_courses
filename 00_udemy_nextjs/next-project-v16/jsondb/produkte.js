@@ -1,6 +1,11 @@
+//root/jsondb/produkte.js
 /**
- * Lokale Produktdaten fuer v16. Dient als Seed-Quelle fuer die Datenbank.
+ * Statisches Datenmodul, liefert Artikel- oder Produktkatalog als zentrale In-Memory-Quelle fuer Demo und Seed.
+ * ES-Module-Exports, optionale TypeScript-Interfaces, verschachtelte Objekt- und Array-Strukturen als Domain-Modell.
+ * Input harte Literale in Arrays, Logic nur Strukturierung im Modul, Output konsumierbare Daten fuer UI, API und Seeder.
+ * Next.js Besonderheit gleiche Daten koennen von Pages API Routes oder App Route Handlers serverseitig wiederverwendet werden.
  */
+
 const jsondb = {
     produkte: [
         {
@@ -9,7 +14,12 @@ const jsondb = {
             kategorie: 'Hauptgericht',
             preis: 6.99,
             url: 'burger',
-            bild: '/bilder/produkte/burger.jpg'
+            bild: '/bilder/produkte/burger.jpg',
+            extras: [
+                {text: 'Extra KÃ¤se', preis: 1.00},
+                {text: 'Bacon', preis: 1.50},
+                {text: 'Doppelt Fleisch', preis: 2.50}
+            ]
         },
         {
             name: 'Coca Cola',
@@ -57,7 +67,12 @@ const jsondb = {
             kategorie: 'Hauptgericht',
             preis: 7.50,
             url: 'pizza',
-            bild: '/bilder/produkte/pizza.jpg'
+            bild: '/bilder/produkte/pizza.jpg',
+            extras: [
+                {text: 'Extra KÃ¤se', preis: 1.20},
+                {text: 'Scharf', preis: 0.00},
+                {text: 'Knoblauch', preis: 0.50}
+            ]
         },
         {
             name: 'SÃ¼ÃŸkartoffel Pommes',
@@ -69,5 +84,4 @@ const jsondb = {
         },
     ]
 };
-
 export default jsondb;

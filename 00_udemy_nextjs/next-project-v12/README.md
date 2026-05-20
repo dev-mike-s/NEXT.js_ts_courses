@@ -1,12 +1,12 @@
-﻿# next-project-v12
+# next-project-v12
 
-## Tech Profile
-- Stack: Legacy Next.js 12 + React 17
-- Routing: Pages Router (`pages/*`)
-- UI: Bootstrap + React-Bootstrap
-- Rendering: Client-Side Rendering (CSR)
-- Data Source: Local JSON DB (`jsondb/produkte.js`)
-- Backend Integration: Mongoose (legacy-style endpoints)
+## Gelernte Themen
+- Pages Router in Next.js 12, statische und dynamische Routen (`pages/*`, `[param]`)
+- Datenstrategien mit `getServerSideProps` und API Routes (`pages/api/*`)
+- Fullstack CRUD mit MongoDB und Mongoose im selben Projekt
+- Auth-Basis mit Cookie-Login fuer Admin-Bereich
+- Globaler Client-State mit Redux Toolkit (Warenkorb, Summen, Checkout-Flow)
+- Externe Zahlungsintegration via PayPal SDK
 
 ## Setup
 - Install: `npm install`

@@ -1,6 +1,11 @@
+//root/jsondb/produkte.js
 /**
- * Lokale Produktdaten fuer v12. Diese Datei simuliert eine kleine Datenquelle ohne externe API.
+ * Statisches Datenmodul, liefert Artikel- oder Produktkatalog als zentrale In-Memory-Quelle fuer Demo und Seed.
+ * ES-Module-Exports, optionale TypeScript-Interfaces, verschachtelte Objekt- und Array-Strukturen als Domain-Modell.
+ * Input harte Literale in Arrays, Logic nur Strukturierung im Modul, Output konsumierbare Daten fuer UI, API und Seeder.
+ * Next.js Besonderheit gleiche Daten koennen von Pages API Routes oder App Route Handlers serverseitig wiederverwendet werden.
  */
+
 const jsondb = {
     produkte: [
         {
@@ -11,9 +16,9 @@ const jsondb = {
             url: 'burger',
             bild: '/bilder/produkte/burger.jpg',
             extras: [
-                { text: 'Doppelt Fleisch', preis: 4.00 },
-                { text: 'Extra Scharf (JalapeÃ±os)', preis: 0.50 },
-                { text: 'Cheddar KÃ¤se', preis: 1.00 }
+                {text: 'Doppelt Fleisch', preis: 4.00},
+                {text: 'Extra Scharf (JalapeÃ±os)', preis: 0.50},
+                {text: 'Cheddar KÃ¤se', preis: 1.00}
             ]
         },
         {
@@ -24,7 +29,7 @@ const jsondb = {
             url: 'cola',
             bild: '/bilder/produkte/cola.jpg',
             extras: [
-                { text: 'EiswÃ¼rfel & Zitrone', preis: 0.00 }
+                {text: 'EiswÃ¼rfel & Zitrone', preis: 0.00}
             ]
         },
         {
@@ -35,8 +40,8 @@ const jsondb = {
             url: 'eis',
             bild: '/bilder/produkte/eis.jpg',
             extras: [
-                { text: 'Schokosauce', preis: 0.80 },
-                { text: 'Extra Sahne', preis: 0.50 }
+                {text: 'Schokosauce', preis: 0.80},
+                {text: 'Extra Sahne', preis: 0.50}
             ]
         },
         {
@@ -47,8 +52,8 @@ const jsondb = {
             url: 'lahmacun',
             bild: '/bilder/produkte/lahmacun.jpg',
             extras: [
-                { text: 'Mit SchafskÃ¤se', preis: 1.00 },
-                { text: 'Knoblauchsauce', preis: 0.30 }
+                {text: 'Mit SchafskÃ¤se', preis: 1.00},
+                {text: 'Knoblauchsauce', preis: 0.30}
             ]
         },
         {
@@ -77,8 +82,8 @@ const jsondb = {
             url: 'pizza',
             bild: '/bilder/produkte/pizza.jpg',
             extras: [
-                { text: 'Extra KÃ¤se', preis: 1.50 },
-                { text: 'Salami', preis: 1.20 }
+                {text: 'Extra KÃ¤se', preis: 1.50},
+                {text: 'Salami', preis: 1.20}
             ]
         },
         {
@@ -89,10 +94,9 @@ const jsondb = {
             url: 'pommes',
             bild: '/bilder/produkte/pommes.jpg',
             extras: [
-                { text: 'TrÃ¼ffel-Mayonnaise', preis: 1.20 }
+                {text: 'TrÃ¼ffel-Mayonnaise', preis: 1.20}
             ]
         }
     ]
 };
-
 export default jsondb;

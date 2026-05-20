@@ -1,10 +1,6 @@
-/**
- * Next.js Konfiguration fuer v12. Aktiviert Strict Mode und SWC Minify.
- */
-const nextConfig = {
 
+const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
-}
-
-module.exports = nextConfig
+};
+module.exports = nextConfig;

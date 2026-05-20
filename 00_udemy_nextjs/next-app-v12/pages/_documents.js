@@ -1,19 +1,19 @@
-// root/pages/_document.js
-
-/* Klassiker in Next.js v12 (Pages Router) für globale HTML-Grundgerüst (html body)
- * Läuft NUR auf dem Server und bereitet die Seite vor dem Abschicken an Browser vor.
- * ctx (Context) weiß alles über den Request (wie HttpContext in C#)
- * Man nutzt getInitialProps hier meistens, um CSS-in-JS serverseitig vorzurendern.
- * Zweck: App hosten ohne Node.js (Apache/Nginx)
+//root/pages/_documents.js
+/**
+ * Custom Document fuer serverseitiges HTML-Grundgeruest, definiert globale html-, head- und body-Struktur.
+ * Document-Klasse aus next/document, static getInitialProps, Html Head Main NextScript als Pflichtbausteine.
+ * Input DocumentContext vom Serverrendering, Logic Sammeln initialer Props, Output finales Dokument-Markup fuer Response.
+ * Next.js Besonderheit _document laeuft nur serverseitig, unterscheidet sich klar von Komponentenlogik in _app und Pages.
  */
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+import Document, {Html, Head, Main, NextScript} from 'next/document';
 
 class MyDocument extends Document {
 
     static async getInitialProps(ctx) {
-        
-        const initialProps = await Document.getInitialProps(ctx)
-        return { ...initialProps }
+
+        const initialProps = await Document.getInitialProps(ctx);
+        return {...initialProps};
     }
 
     render() {
@@ -24,9 +24,7 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-            </Html>
-        )
+            </Html>);
     }
 }
-
-export default MyDocument
+export default MyDocument;

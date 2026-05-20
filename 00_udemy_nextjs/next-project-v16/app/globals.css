@@ -1,7 +1,3 @@
-/** * root/app/globals.css
- * Modernisierung auf Tailwind v4 (CSS-first Engine).
- * Nutzt native CSS-Imports statt der alten @tailwind Directives.
- */
 
 @import "tailwindcss";
 

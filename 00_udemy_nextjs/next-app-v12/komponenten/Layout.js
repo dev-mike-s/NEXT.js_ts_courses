@@ -1,24 +1,20 @@
-/*
- * Komponentenbasiertes CSS Styling:
- * Hier wird eine Wrapper Logik implementiert (Hülle: Ich wrappe die Seite mit dem Layout):
- * 
- * Statt normale props verwendet man das magische React Schlüsselwort 'children', 
- * für spezielle props. Children ist dann auch der Schlüssel und ein React-Element/Array 
- * und dient der Komposition (also Verschachtelung ineinander).
- * ({children}) => destructuring
+//root/komponenten/Layout.js
+/**
+ * Layout-Komponente fuer wiederverwendbaren Seitenrahmen, kombiniert Kopfbereich, Inhaltscontainer und optionale Fusszeile.
+ * Kompositionsmuster mit children-Prop, Import von Unterkomponenten und optional next/head fuer Meta-Tags im Pages Router.
+ * Input Child-Content aus aufrufenden Seiten, Logic strukturelle Einbettung, Output konsistente UI-Huelle ueber mehrere Routen.
+ * Next.js Besonderheit Layout-Ketten variieren zwischen Pages Wrappern und App-Router Root-Layouts, hier projektintern abstrahiert.
  */
 
-import styles from '../styles/Layout.module.css'
-import Navigation from './Navigation'
+import styles from '../styles/Layout.module.css';
+import Navigation from './Navigation';
 
-export default function Layout({ children }) {
+export default function Layout( {children} ) {
 
-  return (
-    <>
+    return (<>
         <Navigation />
         <div className={styles.main}>
             {children}
         </div>
-    </>
-  )
+    </>);
 }
