@@ -6,7 +6,7 @@ const maxDistance = 10;
 const priceBracket: number = dollarSigns.length;
 const hour: number = new Date().getHours();
 let result: string;
-
+ 
 const filteredRestaurants = restaurants.filter((restaurant) => 
 {
   // in price range?
