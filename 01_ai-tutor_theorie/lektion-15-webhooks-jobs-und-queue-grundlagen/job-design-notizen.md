@@ -1,0 +1,3 @@
+﻿- Webhook Request schnell bestaetigen (202), schwere Arbeit in Worker/Queue.
+- Idempotenzschluessel speichern, um Doppelausfuehrung zu verhindern.
+- Retries mit Backoff planen.

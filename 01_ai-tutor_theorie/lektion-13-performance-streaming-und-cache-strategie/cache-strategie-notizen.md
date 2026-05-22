@@ -1,0 +1,4 @@
+﻿- `no-store`: immer frisch, hoehere Last.
+- `revalidate: n`: kontrollierte Frische.
+- `force-cache`: maximaler Cache-Fokus.
+- Fuer jede Route bewusst entscheiden und dokumentieren.

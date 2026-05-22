@@ -1,0 +1,5 @@
+﻿- Keine Secrets im Client Bundle.
+- Eingaben immer validieren.
+- Fehlertexte nach aussen neutral halten.
+- Auth-Cookies `httpOnly`, `secure`, `sameSite` setzen.
+- Rate Limits fuer sensible Endpunkte einplanen.
