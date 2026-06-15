@@ -1,5 +1,8 @@
 //root/lektion-14-validierung-security-und-input-hygiene/safe-input-route.ts
-// @ts-nocheck
+/*
+  Eingaben von aussen werden zuerst validiert, bevor die Route fachlich mit ihnen weiterarbeitet.
+  Feature-Historie: Zod ist eine externe Library, kein Next.js-Feature. Route Handlers sind App-Router-Style ab Next.js 13.2.
+*/
 
 import {z} from "zod";
 
@@ -18,3 +21,5 @@ export async function POST(request: Request) {
 
   return Response.json({ok: true, data: parsed.data}, {status: 201});
 }
+
+

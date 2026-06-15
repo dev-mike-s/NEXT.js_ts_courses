@@ -1,5 +1,8 @@
 //root/lektion-8-datenbanken-postgres-und-mongodb/mongodb-client.ts
-// @ts-nocheck
+/*
+  MongoDB-Verbindung mit Connection Reuse: Der Client wird beim ersten Aufruf erstellt und danach wiederverwendet.
+  Feature-Historie: Connection Reuse ist ein klassisches Backend-Pattern; in Next.js bleibt es wegen Serverless/Route-Handler-Umgebungen besonders wichtig.
+*/
 
 import {MongoClient, Db} from "mongodb";
 
@@ -23,3 +26,5 @@ export type MongoUser = {
   email: string;
   name: string;
 };
+
+

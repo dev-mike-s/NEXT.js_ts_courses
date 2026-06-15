@@ -1,5 +1,8 @@
 //root/lektion-7-auth-middleware-und-security/middleware.ts
-// @ts-nocheck
+/*
+  Middleware laeuft vor Page oder Route Handler und kann schnelle Zugriffskontrollen wie Redirects erledigen.
+  Feature-Historie: Next.js Middleware wurde in Next.js 12 eingefuehrt. Also modern, aber nicht brandneu im Next-13/14-Sinn.
+*/
 
 import {NextRequest, NextResponse} from "next/server";
 
@@ -21,3 +24,5 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: ["/dashboard/:path*"],
 };
+
+

@@ -1,5 +1,8 @@
 //root/lektion-2-routing-layout-und-navigation/layout.tsx
-// @ts-nocheck
+/*
+  RootLayout ist die aeusserste App-Router-Huelle; Navigation und children erscheinen dadurch seitenuebergreifend.
+  Feature-Historie: app/layout.tsx ist App-Router-Architektur und ersetzt im app-Verzeichnis viele alte _app/_document-Anwendungsfaelle. Stabil ab Next.js 13.4.
+*/
 
 // app/layout.tsx
 // ------------------------------------------------------------
@@ -34,3 +37,5 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     </html>
   );
 }
+
+

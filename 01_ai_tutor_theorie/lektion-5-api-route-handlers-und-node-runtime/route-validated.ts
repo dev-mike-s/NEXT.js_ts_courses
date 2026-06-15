@@ -1,5 +1,8 @@
 //root/lektion-5-api-route-handlers-und-node-runtime/route-validated.ts
-// @ts-nocheck
+/*
+  POST-Route mit manueller Validierung: JSON wird gelesen, normalisiert und bei ungueltigen Eingaben mit 400 abgelehnt.
+  Feature-Historie: Route Handlers mit Web Request/Response kamen in Next.js 13.2 fuer den App Router. Manuelle Validierung ist ein aelteres API-Grundmuster.
+*/
 
 // app/api/users/route.ts
 
@@ -28,3 +31,5 @@ export async function POST(request: Request) {
 
   return Response.json({id: "u_123", email, name}, {status: 201});
 }
+
+

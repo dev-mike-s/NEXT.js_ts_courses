@@ -1,5 +1,8 @@
 //root/lektion-16-architektur-und-modularisierung-im-nextjs-backend/service-repository-example.ts
-// @ts-nocheck
+/*
+  Service-Repository-Trennung: Das Repository kapselt Datenzugriff, der Service enthaelt Fachregeln.
+  Feature-Historie: Service/Repository ist ein klassisches Backend-Architekturpattern, nicht Next-spezifisch; modern bleibt daran die saubere Trennung.
+*/
 
 type CreateOrderInput = {
   userId: string;
@@ -30,3 +33,5 @@ export class OrderService {
     return this.repo.create(input);
   }
 }
+
+

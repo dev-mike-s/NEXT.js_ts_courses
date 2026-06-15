@@ -1,5 +1,8 @@
 //root/lektion-11-bff-und-api-orchestrierung/bff-route.ts
-// @ts-nocheck
+/*
+  Backend-for-Frontend: Das Frontend bekommt ein stabiles DTO, statt mehrere externe APIs und deren Rohformate kennen zu muessen.
+  Feature-Historie: App-Router Route Handlers kamen mit Next.js 13.2; der App Router wurde mit Next.js 13.4 produktionsreif. BFF selbst ist ein aelteres Architekturpattern.
+*/
 
 // app/api/dashboard/route.ts
 
@@ -30,3 +33,5 @@ export async function GET() {
     },
   });
 }
+
+

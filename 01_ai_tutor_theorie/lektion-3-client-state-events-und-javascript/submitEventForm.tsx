@@ -1,5 +1,8 @@
 //root/lektion-3-client-state-events-und-javascript/submitEventForm.tsx
-// @ts-nocheck
+/*
+  Formular mit eigenem Submit-Handler: preventDefault verhindert den Reload, FormData liest die Felder aus dem Formular.
+  Feature-Historie: onSubmit, preventDefault und FormData sind klassische Browser-/React-Muster. "use client" ordnet die Datei in den App Router ab Next.js 13.4 ein.
+*/
 
 "use client";
 
@@ -19,7 +22,6 @@ export default function SubmitEventForm({onSend}: {onSend: (payload: ContactPayl
     const formData = new FormData(event.currentTarget);
 
     const payload: ContactPayload = {
-      // Kurzschreibweise erklaert:
       // formData.get("name") kann string | File | null sein.
       // ?? "" -> falls null, nutze leerer String.
       // String(...) -> garantiert Typ string.
@@ -38,3 +40,5 @@ export default function SubmitEventForm({onSend}: {onSend: (payload: ContactPayl
     </form>
   );
 }
+
+

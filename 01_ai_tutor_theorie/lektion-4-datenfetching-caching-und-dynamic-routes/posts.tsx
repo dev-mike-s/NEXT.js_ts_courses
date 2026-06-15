@@ -1,5 +1,8 @@
 //root/lektion-4-datenfetching-caching-und-dynamic-routes/posts.tsx
-// @ts-nocheck
+/*
+  Datenfetching in einer Server Component: getPosts kapselt Laden, Cache-Strategie und Fehlerfall.
+  Feature-Historie: fetch mit next.revalidate ist App-Router-Datenfetching ab Next.js 13, produktionsreif ab 13.4. ISR selbst ist aelter und kam mit Next.js 9.5.
+*/
 
 // app/posts/page.tsx
 
@@ -24,3 +27,5 @@ export default async function PostsPage() {
 
   return <ul>{posts.map((p) => <li key={p.id}>{p.title}</li>)}</ul>;
 }
+
+

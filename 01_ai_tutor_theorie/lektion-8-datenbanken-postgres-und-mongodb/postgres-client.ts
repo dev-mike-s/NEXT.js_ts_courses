@@ -1,5 +1,8 @@
 //root/lektion-8-datenbanken-postgres-und-mongodb/postgres-client.ts
-// @ts-nocheck
+/*
+  PostgreSQL-Pool: Mehrere Anfragen koennen verwaltete DB-Verbindungen wiederverwenden.
+  Feature-Historie: Connection Pooling ist ein altes, bewaehrtes Datenbankpattern und nicht Next-spezifisch, sondern Node.js-Backend-Grundlage.
+*/
 
 import {Pool} from "pg";
 
@@ -23,3 +26,5 @@ export async function listUsersFromPostgres(): Promise<UserRow[]> {
 
   return result.rows;
 }
+
+

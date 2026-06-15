@@ -1,5 +1,8 @@
 //root/lektion-8-datenbanken-postgres-und-mongodb/user-repository.ts
-// @ts-nocheck
+/*
+  Repository-Funktion, die Postgres und MongoDB zu einem gemeinsamen UserDto normalisiert.
+  Feature-Historie: Repository + DTO ist klassische Backend-Architektur. Promise.all ist JavaScript/ES2015; modern ist hier die saubere Datenquellen-Kapselung.
+*/
 
 import {getMongoDb} from "./mongodb-client";
 import {listUsersFromPostgres} from "./postgres-client";
@@ -26,3 +29,5 @@ export async function listUsersUnified(): Promise<UserDto[]> {
     ...mongoUsers.map((u: any) => ({id: String(u._id), email: String(u.email), name: String(u.name), source: "mongodb" as const})),
   ];
 }
+
+

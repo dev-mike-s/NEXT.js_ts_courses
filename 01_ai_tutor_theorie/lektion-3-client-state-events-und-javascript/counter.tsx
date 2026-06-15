@@ -1,5 +1,8 @@
 //root/lektion-3-client-state-events-und-javascript/counter.tsx
-// @ts-nocheck
+/*
+  Client Component fuer lokales UI-Verhalten: useState speichert nur den Zustand dieses Buttons im Browser.
+  Feature-Historie: useState kam mit React Hooks in React 16.8. "use client" ist moderner App-Router-Kontext, produktionsreif ab Next.js 13.4.
+*/
 
 "use client";
 
@@ -16,7 +19,6 @@ export default function CounterClient() {
   return (
     <button
       onClick={() =>
-        // Kurzschreibweise erklaert:
         // (prev) => prev + 1 ist eine "funktionale State-Aktualisierung".
         // prev = letzter stabiler State, nicht der moeglicherweise stale Wert.
         setCount((prev) => prev + 1)
@@ -26,3 +28,5 @@ export default function CounterClient() {
     </button>
   );
 }
+
+

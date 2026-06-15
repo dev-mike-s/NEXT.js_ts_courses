@@ -1,5 +1,8 @@
 //root/lektion-6-server-actions-und-form-handling/serverActionWithSubmitEvent.tsx
-// @ts-nocheck
+/*
+  Client-gesteuertes Formular mit Server Action: Die UI verhindert den Standard-Submit und zeigt danach einen Status an.
+  Feature-Historie: Der Client-Submit-Handler ist klassisches React; der direkte Aufruf einer Server Action ist modernes Next.js, stabil ab Next.js 14.
+*/
 
 "use client";
 
@@ -33,3 +36,5 @@ export default function ServerActionWithSubmitEvent() {
     </form>
   );
 }
+
+

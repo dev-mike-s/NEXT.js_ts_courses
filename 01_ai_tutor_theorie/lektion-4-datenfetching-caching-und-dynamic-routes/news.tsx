@@ -1,5 +1,8 @@
 //root/lektion-4-datenfetching-caching-und-dynamic-routes/news.tsx
-// @ts-nocheck
+/*
+  Server Component mit Revalidierung: Die Seite darf kurz gecacht und danach erneuert werden.
+  Feature-Historie: ISR kam als Konzept in Next.js 9.5. Die Server-Component/App-Router-Variante mit revalidate gehoert zu Next.js 13, stabil ab 13.4.
+*/
 
 // app/news/page.tsx
 
@@ -12,3 +15,5 @@ export default async function NewsPage() {
 
   return <div>{posts.map((p) => <p key={p.id}>{p.title}</p>)}</div>;
 }
+
+

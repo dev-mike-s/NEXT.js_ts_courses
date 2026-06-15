@@ -1,5 +1,8 @@
 //root/lektion-6-server-actions-und-form-handling/actions.ts
-// @ts-nocheck
+/*
+  Server Actions laufen auf dem Server und halten die Validierung zentral, egal ob Daten als Objekt oder FormData ankommen.
+  Feature-Historie: Server Actions waren in Next.js 13.4 Alpha und wurden in Next.js 14 stabil. In React selbst gehoeren Actions/Server Actions zur React-19-Generation.
+*/
 
 "use server";
 
@@ -28,3 +31,5 @@ export async function submitContactFromFormData(formData: FormData) {
 
   return submitContact(payload);
 }
+
+

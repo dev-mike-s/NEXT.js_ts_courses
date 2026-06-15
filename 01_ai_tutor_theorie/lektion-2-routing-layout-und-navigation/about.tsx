@@ -1,5 +1,8 @@
 //root/lektion-2-routing-layout-und-navigation/about.tsx
-// @ts-nocheck
+/*
+  App-Router-Konvention: In app/about/page.tsx waere diese Komponente die Seite fuer /about.
+  Feature-Historie: File-based Routing ist eine alte Next.js-Kernidee. Die app/.../page.tsx-Konvention gehoert zum App Router, stabil ab Next.js 13.4.
+*/
 
 // app/about/page.tsx
 // ------------------------------------------------------------
@@ -23,3 +26,5 @@ export default function AboutPage() {
     </main>
   );
 }
+
+

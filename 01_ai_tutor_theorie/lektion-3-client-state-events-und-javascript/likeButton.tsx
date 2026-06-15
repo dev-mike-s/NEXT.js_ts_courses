@@ -1,5 +1,8 @@
 //root/lektion-3-client-state-events-und-javascript/likeButton.tsx
-// @ts-nocheck
+/*
+  Kleines Event-State-Beispiel: label kommt als Prop von aussen, likes gehoert der Komponente selbst.
+  Feature-Historie: React State und Event Handler sind klassische React-Grundlagen; useState gibt es seit React 16.8. "use client" gehoert zum App Router ab Next.js 13.4.
+*/
 
 "use client";
 
@@ -22,3 +25,5 @@ export default function LikeButton({label}: {label: string}) {
     </button>
   );
 }
+
+

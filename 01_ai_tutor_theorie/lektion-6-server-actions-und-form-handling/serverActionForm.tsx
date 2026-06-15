@@ -1,5 +1,8 @@
 //root/lektion-6-server-actions-und-form-handling/serverActionForm.tsx
-// @ts-nocheck
+/*
+  Formular ohne eigenen Client-Handler: Next.js ruft die Server Action aus dem action-Attribut auf und uebergibt FormData.
+  Feature-Historie: form action={serverAction} ist Server-Action-Pattern: Alpha in Next.js 13.4, stabil ab Next.js 14; es baut auf klassischen HTML-Formularen auf.
+*/
 
 // app/contact/page.tsx
 
@@ -18,3 +21,5 @@ export default function ServerActionForm() {
     </form>
   );
 }
+
+
