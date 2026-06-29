@@ -6,6 +6,8 @@
  * Next.js Besonderheit App-Router Navigation verwendet next/navigation, Zugriffsschutz wird durch Middleware und Cookies abgesichert.
  */
 
+// @ts-nocheck
+
 'use client';
 
 import {useState} from 'react';

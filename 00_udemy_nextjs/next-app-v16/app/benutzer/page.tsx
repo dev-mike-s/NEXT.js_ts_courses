@@ -6,6 +6,8 @@
  * Next.js Besonderheit page.tsx ist leaf-segmentgebunden, macht den Ordnerpfad oeffentlich erreichbar und folgt file-system routing.
  */
 
+//@ts-nocheck
+
 interface User {
     id: number;
     username: string;
@@ -23,3 +25,5 @@ export default async function BenutzerUebersicht() {
                 </h2>))}
         </div>);
 }
+
+

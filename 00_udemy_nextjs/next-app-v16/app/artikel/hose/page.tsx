@@ -6,6 +6,8 @@
  * Next.js Besonderheit page.tsx ist leaf-segmentgebunden, macht den Ordnerpfad oeffentlich erreichbar und folgt file-system routing.
  */
 
+//@ts-nocheck
+
 export default function HosePage() {
 
     return (

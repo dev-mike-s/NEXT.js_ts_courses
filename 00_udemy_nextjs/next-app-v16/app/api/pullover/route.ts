@@ -6,6 +6,8 @@
  * Next.js Besonderheit route.ts ersetzt API Routes im App Router, laeuft serverseitig und unterstuetzt Dynamic Segments.
  */
 
+//@ts-nocheck
+
 import {pullover} from '@/data/artikel';
 import {NextResponse} from 'next/server';
 

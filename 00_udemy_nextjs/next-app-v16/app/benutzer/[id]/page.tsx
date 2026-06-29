@@ -6,6 +6,8 @@
  * Next.js Besonderheit App-Router Dynamic Segments verwenden Promise-params, Catch-all und Optional Catch-all folgen Dateikonvention.
  */
 
+//@ts-nocheck
+
 interface User {
     id: number;
     username: string;

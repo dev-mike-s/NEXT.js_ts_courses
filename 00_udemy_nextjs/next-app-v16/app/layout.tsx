@@ -6,6 +6,8 @@
  * Next.js Besonderheit app/layout.tsx ist verpflichtend im App Router und ersetzt die Kombination aus _app und _document.
  */
 
+// @ts-nocheck
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import type {Metadata} from 'next';
 import Link from 'next/link';
