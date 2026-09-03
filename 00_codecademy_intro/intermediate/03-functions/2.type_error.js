@@ -7,4 +7,5 @@ function printLengthOfText(text) {
     }
     console.log(text.length);
 }
+
 printLengthOfText(3); //Error: Argument is not a string!

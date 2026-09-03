@@ -12,7 +12,6 @@ function printOperations(a, b) {
 // The function call below should print: 12 1
 printOperations(6, 6);
 
-
 function exclaim(name, count) {
 
     for (let i = 0; i < count; i += 1) {

@@ -1,7 +1,8 @@
-import productsData from './products';
-const products = productsData as unknown as Product[];
 
-interface Product 
+import productsData from './products';
+const products = productsData as any as IProduct[];
+
+interface IProduct 
 {
   name: string;
   price: number;
@@ -16,7 +17,7 @@ let taxPercent: number;
 let taxTotal: number;
 let total: number;
 
-let shoppingCart: Product[] = [];
+let shoppingCart: IProduct[] = [];
 
 if (!product) 
 {
@@ -26,7 +27,7 @@ if (!product)
 // test and exercise purpose 
 const findProduct = products.find((productElement) => productElement.name === 'fanny pack');
 
-let checkPreOrder = (element : Product) => 
+let checkPreOrder = (element : IProduct) => 
 {
   if (element.preOrder === true) { console.log("You'll get notified when it's sent."); } 
   else { console.log("It has no pre order option.")}
